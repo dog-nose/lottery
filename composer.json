@@ -1,0 +1,37 @@
+{
+    "name": "dog-nose/lottery",
+    "description": "A random lottery SDK for PHP 8.4",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.65",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DogNose\\Lottery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DogNose\\Lottery\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "format": "php-cs-fixer fix",
+        "lint": "phpstan analyse",
+        "test": "phpunit",
+        "check": [
+            "@format",
+            "@lint",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
